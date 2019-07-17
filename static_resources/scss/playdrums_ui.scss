@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 3vw;
     margin-bottom: 1vw;
     user-select: none;
+    text-transform: uppercase;
 
     @media only screen and (max-width: 600px)  {
         font-size: 5vw;
