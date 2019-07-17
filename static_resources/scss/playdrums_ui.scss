@@ -2,6 +2,7 @@
 $primary-color: #131A21;
 $secondary-color: #252A39;
 $highlight-color: #8FE4FF;
+$copywrite-color: #717174;
 
 $box-shadow-dark: 0px 3px 6px rgba(0, 0, 0, .16);
 $box-shadow-glow-wide: 0px 0px 15px rgba(143, 228, 255, 1);
@@ -128,5 +129,18 @@ h1, h2, h3, h4, h5, h6, p {
 
     p {
         color: $secondary-color !important;
+    }
+}
+
+.playdrums__copywrite-text {
+    position: absolute;
+    bottom: .5vw;
+    right: 2vw;
+    color: $copywrite-color;
+    font-size: .8vw;
+    letter-spacing: .1vw;
+
+    b {
+        font-size: .9vw;
     }
 }
