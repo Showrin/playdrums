@@ -1,0 +1,115 @@
+// #################### App UI Variables ##################
+$primary-color: #131A21;
+$secondary-color: #252A39;
+$highlight-color: #8FE4FF;
+
+$box-shadow-dark: 0px 3px 6px rgba(0, 0, 0, .16);
+$box-shadow-glow-wide: 0px 0px 15px rgba(143, 228, 255, 1);
+$box-shadow-glow-narrow: 0px 0px 2px rgba(131, 144, 148, 0.5);
+
+$transition-speedy: all 0.1s ease-in-out;
+$transition-standard: all 0.33s ease-in-out;
+
+
+// #################### App UI Fonts ##################
+@font-face {
+    src: url('../fonts/product-sans/product_sans.woff2');
+    font-family: 'product-sans';
+    font-style: normal;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: $primary-color;
+    font-family: 'product-sans';
+    letter-spacing: 0.2vw;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+}
+
+
+// #################### App Header UI settings ##################
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.header__brand-icon {
+    width: 170px;
+    height: auto;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+.header__setting {
+    position: relative;
+    align-self: flex-start;
+    height: 80px;
+    width: 80px;
+    background-color: $secondary-color;
+    border-bottom-left-radius: 100%;
+    margin-left: auto;
+    box-shadow: $box-shadow-dark;
+    cursor: pointer;
+}
+
+.header__setting-icon {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    right: 17px;
+    top: 17px;
+    transition: $transition-speedy;
+}
+
+.header__setting:hover {
+    .header__setting-icon {
+        transform: scale(1.1);
+        filter: drop-shadow($box-shadow-glow-narrow);
+    }
+}
+
+
+// #################### App Drum Area UI settings ##################
+.drum-area {
+    display: flex;
+    padding: 0 1vw;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2vw;
+}
+
+.drum-area__key {
+    display: flex;
+    width: 17vw;
+    height: 17vw;
+    margin: .5vw;
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center;
+    background-color: $secondary-color;
+    box-shadow: $box-shadow-dark;
+}
+
+.drum-area__key--2X {
+    width: 35vw;
+}
+
+.drum-area__key-name {
+    color: $highlight-color;
+    font-size: 3vw;
+    margin-bottom: 1vw;
+}
+
+.drum-area__key-details {
+    color: $highlight-color;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+}
