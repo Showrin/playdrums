@@ -7,7 +7,7 @@ $box-shadow-dark: 0px 3px 6px rgba(0, 0, 0, .16);
 $box-shadow-glow-wide: 0px 0px 15px rgba(143, 228, 255, 1);
 $box-shadow-glow-narrow: 0px 0px 2px rgba(131, 144, 148, 0.5);
 
-$transition-speedy: all 0.1s ease-in-out;
+$transition-speedy: all 0.07s;
 $transition-standard: all 0.33s ease-in-out;
 
 
@@ -91,11 +91,14 @@ h1, h2, h3, h4, h5, h6, p {
     width: 17vw;
     height: 17vw;
     margin: .5vw;
+    border-radius: 5px;
     flex-flow: column nowrap;
     justify-content: center; 
     align-items: center;
     background-color: $secondary-color;
     box-shadow: $box-shadow-dark;
+    transition: $transition-speedy;
+    cursor: pointer;
 }
 
 .drum-area__key--2X {
@@ -112,4 +115,18 @@ h1, h2, h3, h4, h5, h6, p {
     color: $highlight-color;
     font-size: 1.2vw;
     letter-spacing: 0.1vw;
+}
+
+.drum-area__key--playing {
+    background-color: $highlight-color;
+    box-shadow: $box-shadow-glow-wide;
+    transform: scale(1.03);
+
+    h2 {
+        color: $secondary-color !important;
+    }
+
+    p {
+        color: $secondary-color !important;
+    }
 }
