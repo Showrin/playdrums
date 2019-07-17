@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6, p {
     height: auto;
     margin-left: 1vw;
     margin-top: 1vw;
+
+    @media only screen and (max-width: 600px)  {
+        width: 100px;
+        margin-left: 5vw;
+        margin-top: 5vw;
+    }
 }
 
 .header__setting {
@@ -57,6 +63,11 @@ h1, h2, h3, h4, h5, h6, p {
     margin-left: auto;
     box-shadow: $box-shadow-dark;
     cursor: pointer;
+
+    @media only screen and (max-width: 600px)  {
+        height: 70px;
+        width: 70px;
+    }
 }
 
 .header__setting-icon {
@@ -66,6 +77,11 @@ h1, h2, h3, h4, h5, h6, p {
     right: 17px;
     top: 17px;
     transition: $transition-speedy;
+
+    @media only screen and (max-width: 600px)  {
+        right: 15px;
+        top: 15px;
+    }
 }
 
 .header__setting:hover {
@@ -85,6 +101,10 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: center;
     align-content: center;
     margin-top: 2vw;
+
+    @media only screen and (max-width: 600px)  {
+        margin-top: 20vw;
+    }
 }
 
 .drum-area__key {
@@ -102,20 +122,56 @@ h1, h2, h3, h4, h5, h6, p {
     cursor: pointer;
 }
 
+.drum-area__key--mobile-1X {
+
+    @media only screen and (max-width: 600px)  {
+        width: 25vw;
+        height: 25vw;
+        margin: 2vw;
+    }
+}
+
 .drum-area__key--2X {
     width: 35vw;
+}
+
+.drum-area__key-mobile--2X {
+    @media only screen and (max-width: 600px)  {
+        width: 39.5vw;
+        height: 25vw;
+        margin: 2vw;
+    }
+}
+
+.drum-area__key-mobile--full {
+    @media only screen and (max-width: 600px)  {
+        width: 83vw !important;
+        height: 25vw;
+        margin: 2vw;
+        order: 9;
+    }
 }
 
 .drum-area__key-name {
     color: $highlight-color;
     font-size: 3vw;
     margin-bottom: 1vw;
+    user-select: none;
+
+    @media only screen and (max-width: 600px)  {
+        font-size: 5vw;
+    }
 }
 
 .drum-area__key-details {
     color: $highlight-color;
     font-size: 1.2vw;
     letter-spacing: 0.1vw;
+    user-select: none;
+
+    @media only screen and (max-width: 600px)  {
+        display: none;
+    }
 }
 
 .drum-area__key--playing {
@@ -139,8 +195,22 @@ h1, h2, h3, h4, h5, h6, p {
     color: $copywrite-color;
     font-size: .8vw;
     letter-spacing: .1vw;
+    user-select: none;
 
     b {
         font-size: .9vw;
+    }
+
+    @media only screen and (max-width: 600px)  {
+        display: inline-block;
+        width: 100%;
+        bottom: 4vw;
+        font-size: 2.5vw;
+        letter-spacing: .4vw;
+        text-align: center;
+
+        b {
+            font-size: 3vw;
+        }
     }
 }
